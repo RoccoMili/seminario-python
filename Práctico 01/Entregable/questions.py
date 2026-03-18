@@ -1,22 +1,22 @@
 import random
 
-words = [
-    "python",
-    "programa",
-    "variable",
-    "funcion",
-    "bucle",
-    "cadena",
-    "entero",
-    "lista",
-]
+words = {
+    "datos": ["variable", "cadena", "entero", "lista"],
+    "general": ["python", "programa", "funcion", "bucle"],
+}
 
-word = random.choice(words)
 guessed = []
 attempts = 6
 points = 0
 
-print("¡Bienvenido al Ahorcado!")
+categories = ", ".join(words.keys())
+category = input(f"¡Bienvenido al Ahorcado! Elegí una categoría de las siguientes: {categories}\n")
+
+while category.lower() not in words:
+    category = input(f"Categoría inválida. Elegí una categoría de las siguientes: {categories}\n")
+    
+word = random.choice(words[category.lower()])
+
 print()
 
 while attempts > 0:
