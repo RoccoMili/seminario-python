@@ -5,15 +5,11 @@ words = {
     "general": ["python", "programa", "funcion", "bucle"],
 }
 
-guessed = []
-attempts = 6
-points = 0
-
 categories = ", ".join(words.keys())
-category = input(f"¡Bienvenido al Ahorcado! Elegí una categoría de las siguientes: {categories}\n")
+category = input(f"¡Bienvenido al Ahorcado! Elegí una categoría de las siguientes: {categories}\n").lower()
 
-while category.lower() not in words:
-    category = input(f"Categoría inválida. Elegí una categoría de las siguientes: {categories}\n")
+while category not in words:
+    category = input(f"Categoría inválida. Elegí una categoría de las siguientes: {categories}\n").lower()
 
 # NOTA: La consigna pide "al jugar varias rondas seguidas": para no usar funciones todavía
 # porque corresponde a otra clase, voy a tomar otro approach distinto con un for externo
@@ -24,6 +20,10 @@ sampled_words = random.sample(words[category], k=len(words[category]))
 print()
 
 for word in sampled_words:
+    guessed = []
+    attempts = 6
+    points = 0
+
     while attempts > 0:
         # Mostrar progreso: letras adivinadas y guiones para las que faltan
         progress = ""
@@ -69,10 +69,5 @@ for word in sampled_words:
             break
     else:
         print("¡No hay más en esta categoría!")
-
-    guessed.clear()
-    progress = ""
-    attempts = 6
-    points = 0
 
     print()
