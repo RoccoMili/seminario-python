@@ -22,6 +22,10 @@ print()
 for word in sampled_words:
     guessed = []
     attempts = 6
+
+    # Dado el 'wording' de la consigna, decidí poner los puntos aparte de los attempts
+    # pero podrían ser contados con la misma variable en tanto sean puntos por ronda
+
     points = 0
 
     while attempts > 0:
