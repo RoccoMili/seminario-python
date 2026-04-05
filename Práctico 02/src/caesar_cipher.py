@@ -1,6 +1,6 @@
 # Me pareció buen uso de un módulo estándar, porque al trabajar con
 # valores ASCII necesitaba algo de este estilo para hacer un translate
-# (que era mi idea original). Tuve que investigar.
+# (que era mi idea original). Tuve que investigarlo.
 import string
 
 def cipher(message, shift):
