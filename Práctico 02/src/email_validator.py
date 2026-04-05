@@ -3,18 +3,18 @@ def validate(email):
     if len(separated) != 2:
         return False
 
-    nombre, dominio = separated    
+    local, domain = separated    
 
     # Esta primer cláusula es innecesaria si uso email.startswith(args), 
     # pero para tener más legibilidad añadimos ese condicional
 
-    if len(nombre) == 0 or nombre.startswith(("@", ".")):
+    if len(local) == 0 or local.startswith(("@", ".")):
         return False
-    elif dominio.count(".") == 0:
+    elif domain.count(".") == 0:
         return False
-    elif dominio.endswith(("@", ".")):
+    elif domain.endswith(("@", ".")):
         return False
-    elif len(dominio.split(".")[-1]) < 2:
+    elif len(domain.split(".")[-1]) < 2:
         return False
     else:
         return True
