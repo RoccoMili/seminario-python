@@ -2,6 +2,9 @@
 
 Resolución de las actividades prácticas 2 (definido acá como Práctico 02). Contiene los ejercicios resueltos en formato Jupyter Notebook y sus respectivos módulos de código fuente.
 
+## Nombre, Apellido, Legajo:
+Rocco Milito [018612/4]
+
 ## Estructura del proyecto
 
 * `notebooks/`: Contiene los archivos `.ipynb` con la resolución y ejecución de cada ejercicio (incluyendo el Ejercicio 10 de entrega obligatoria).
